@@ -50,7 +50,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(7, 23, 39, 0.92);
+  background: rgba(7, 23, 39, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--gold);
 }
@@ -138,7 +138,7 @@ a {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.3fr 0.95fr;
+  grid-template-columns: 1.38fr 0.92fr;
   align-items: center;
   gap: 52px;
   padding: 72px 0 58px;
@@ -146,6 +146,7 @@ a {
 
 .hero-copy {
   padding-left: 6px;
+  padding-top: 10px;
 }
 
 .eyebrow {
@@ -164,8 +165,8 @@ a {
   line-height: 0.8;
   letter-spacing: -0.06em;
   color: #f6f0e5;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  max-width: 770px;
 }
 
 .hero-copy h1 span {
@@ -177,7 +178,7 @@ a {
 }
 
 .hero-copy h1 .year {
-  margin-left: 0.18em;
+  margin-left: 0.12em;
   color: var(--gold-soft);
   font-size: clamp(4rem, 5vw, 6.5rem);
   line-height: 1;
@@ -264,7 +265,7 @@ a {
 .book-front {
   width: 300px;
   height: 440px;
-  right: 100px;
+  right: 95px;
   top: 52px;
   background: transparent;
   border: none;
@@ -283,8 +284,8 @@ a {
 .quote-card {
   width: 270px;
   min-height: 240px;
-  left: 56px;
-  top: 230px;
+  left: 32px;
+  top: 250px;
   padding: 18px 18px 16px;
   background: rgba(9, 36, 58, 0.9);
   border: 1px solid rgba(212, 174, 94, 0.32);
@@ -318,8 +319,8 @@ a {
 
 .author-card {
   width: 240px;
-  right: 0;
-  bottom: 4px;
+  right: 12px;
+  bottom: 8px;
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.16);
   z-index: 4;
