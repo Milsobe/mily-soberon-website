@@ -19,277 +19,45 @@
         --ivory: #f6efe7;
         --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
       }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-        background: var(--navy-900);
-        color: var(--ivory);
-      }
+      body { margin: 0; font-family: "Inter", sans-serif; background: var(--navy-900); color: var(--ivory); }
       a { color: inherit; text-decoration: none; }
       img { display: block; max-width: 100%; }
-
-      .container {
-        width: min(1280px, calc(100% - 40px));
-        margin: 0 auto;
-      }
-
-      .site-header {
-        background: rgba(6, 21, 34, 0.98);
-        border-bottom: 1px solid rgba(215, 178, 103, 0.8);
-      }
-
-      .nav-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 88px;
-        gap: 1rem;
-      }
-
-      .brand {
-        display: inline-flex;
-        flex-direction: column;
-        gap: 0.16rem;
-        text-transform: uppercase;
-      }
-
-      .brand-name {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(2.1rem, 2.3vw, 3.2rem);
-        line-height: 0.9;
-        letter-spacing: 0.04em;
-        font-weight: 700;
-        color: var(--ivory);
-      }
-
-      .brand-role {
-        font-size: 0.7rem;
-        color: rgba(246, 239, 231, 0.8);
-        letter-spacing: 0.27em;
-      }
-
-      .main-nav {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        gap: clamp(1rem, 2vw, 2rem);
-      }
-
-      .main-nav a {
-        color: rgba(246, 239, 231, 0.92);
-        text-transform: uppercase;
-        font-size: 0.72rem;
-        letter-spacing: 0.18em;
-        font-weight: 600;
-        transition: color 0.2s ease;
-      }
-
+      .container { width: min(1280px, calc(100% - 40px)); margin: 0 auto; }
+      .site-header { background: rgba(6, 21, 34, 0.98); border-bottom: 1px solid rgba(215, 178, 103, 0.8); }
+      .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 88px; gap: 1rem; }
+      .brand { display: inline-flex; flex-direction: column; gap: 0.16rem; text-transform: uppercase; }
+      .brand-name { font-family: "Cormorant Garamond", serif; font-size: clamp(2.1rem, 2.3vw, 3.2rem); line-height: 0.9; letter-spacing: 0.04em; font-weight: 700; color: var(--ivory); }
+      .brand-role { font-size: 0.7rem; color: rgba(246, 239, 231, 0.8); letter-spacing: 0.27em; }
+      .main-nav { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: clamp(1rem, 2vw, 2rem); }
+      .main-nav a { color: rgba(246, 239, 231, 0.92); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.18em; font-weight: 600; transition: color 0.2s ease; }
       .main-nav a:hover { color: var(--gold-soft); }
-
-      .hero {
-        background: linear-gradient(180deg, #071d2f 0%, #0a2034 100%);
-        padding: 2.25rem 0 3rem;
-      }
-
-      .hero-shell {
-        width: min(1180px, calc(100% - 28px));
-        margin: 0 auto;
-      }
-
-      .hero-title {
-        margin: 0;
-        text-align: center;
-        color: var(--gold);
-        font-family: "Cormorant Garamond", serif;
-        font-weight: 700;
-        font-size: clamp(4.1rem, 7vw, 10.4rem);
-        line-height: 0.82;
-        letter-spacing: -0.06em;
-      }
-
-      .hero-line {
-        width: 100%;
-        border: 0;
-        border-top: 2px solid rgba(215, 178, 103, 0.9);
-        margin: 1.1rem auto 1.4rem;
-      }
-
-      .hero-subtitle {
-        display: block;
-        text-align: center;
-        color: var(--gold);
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(1.45rem, 2.7vw, 3.3rem);
-        line-height: 1.1;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-
-      .hero-image-wrap {
-        margin-top: 1.5rem;
-        display: flex;
-        justify-content: center;
-      }
-
-      .hero-image {
-        width: min(100%, 1040px);
-        box-shadow: var(--shadow);
-        border: 1px solid rgba(215, 178, 103, 0.75);
-      }
-
-      .hero-author-name {
-        margin-top: 1.2rem;
-        text-align: center;
-        color: var(--gold);
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(2.2rem, 3.3vw, 4.5rem);
-        letter-spacing: 0.12em;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-
-      @media (max-width: 900px) {
-        .nav-wrap {
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 1rem 0;
-        }
-        .main-nav { justify-content: flex-start; }
-      }
-
-      @media (max-width: 620px) {
-        .main-nav {
-          gap: 0.7rem 1rem;
-        }
-        .main-nav a {
-          letter-spacing: 0.12em;
-          font-size: 0.66rem;
-        }
-        .hero {
-          padding-top: 1.5rem;
-        }
-        .hero-subtitle {
-          letter-spacing: 0.04em;
-        }
-      }
+      .hero { background: linear-gradient(180deg, #071d2f 0%, #0a2034 100%); padding: 2.25rem 0 3rem; }
+      .hero-shell { width: min(1280px, calc(100% - 28px)); margin: 0 auto; }
+      .hero-title { margin: 0; text-align: center; color: var(--gold); font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: clamp(4.4rem, 7.6vw, 11.6rem); line-height: 0.82; letter-spacing: -0.06em; }
+      .hero-line { width: 100%; border: 0; border-top: 2px solid rgba(215, 178, 103, 0.9); margin: 0.95rem auto 1.05rem; }
+      .hero-subtitle { display: block; text-align: center; color: var(--gold); font-family: "Cormorant Garamond", serif; font-size: clamp(1.45rem, 2.7vw, 3.3rem); line-height: 1.1; letter-spacing: 0.09em; text-transform: uppercase; font-weight: 600; }
+      .hero-image-wrap { margin-top: 0.95rem; display: flex; justify-content: center; }
+      .hero-image { width: min(100%, 1160px); box-shadow: var(--shadow); border: 1px solid rgba(215, 178, 103, 0.75); }
+      .hero-author-name { margin-top: 1.2rem; text-align: center; color: var(--gold); font-family: "Cormorant Garamond", serif; font-size: clamp(2.2rem, 3.3vw, 4.5rem); letter-spacing: 0.12em; font-weight: 700; text-transform: uppercase; }
+      .highlights-section, .content-section, .site-footer { background: #0a2034; }
+      @media (max-width: 900px) { .nav-wrap { flex-direction: column; align-items: flex-start; padding: 1rem 0; } .main-nav { justify-content: flex-start; } }
+      @media (max-width: 620px) { .main-nav { gap: 0.7rem 1rem; } .main-nav a { letter-spacing: 0.12em; font-size: 0.66rem; } .hero { padding-top: 1.5rem; } .hero-subtitle { letter-spacing: 0.04em; } }
     </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="Mily Soberon home">
-          <span class="brand-name">Mily Soberon</span>
-          <span class="brand-role">Author &amp; Memoirist</span>
-        </a>
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#book">The Book</a>
-          <a href="#about">About Mily</a>
-          <a href="#story">My Story</a>
-          <a href="#faith">Faith</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
+    <header class="site-header"><div class="container nav-wrap"><a class="brand" href="#home" aria-label="Mily Soberon home"><span class="brand-name">Mily Soberon</span><span class="brand-role">Author &amp; Memoirist</span></a><nav class="main-nav" aria-label="Main navigation"><a href="#book">The Book</a><a href="#about">About Mily</a><a href="#story">My Story</a><a href="#faith">Faith</a><a href="#contact">Contact</a></nav></div></header>
     <main id="main-content">
-      <section class="hero" id="home">
-        <div class="hero-shell">
-          <h1 class="hero-title">Escape from<br />Communism 1962</h1>
-          <hr class="hero-line" />
-          <span class="hero-subtitle">Looking at the Revolution through a Child’s Eyes</span>
-          <div class="hero-image-wrap">
-            <img class="hero-image" src="assets/book-cover.png" alt="Escape from Communism 1962 book cover featuring Mily Soberon as a child with a cake" />
-          </div>
-          <div class="hero-author-name">Mily Soberon</div>
-        </div>
-      </section>
-
-      <section class="highlights-section" aria-label="Memoir themes">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">A Life Remembered</p>
-            <h2>Stories shaped by faith, family, and freedom.</h2>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-card"><span class="feature-number">01</span><h3>Faith</h3><p>God’s presence sustained a family through uncertainty and transition.</p></article>
-            <article class="feature-card"><span class="feature-number">02</span><h3>Family</h3><p>Love, sacrifice, and memory carried a family through historic upheaval.</p></article>
-            <article class="feature-card"><span class="feature-number">03</span><h3>Freedom</h3><p>A personal testimony of resilience and the enduring value of liberty.</p></article>
-            <article class="feature-card"><span class="feature-number">04</span><h3>Resilience</h3><p>A child’s perspective on courage, renewal, and the strength to move forward.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section id="book" class="content-section book-section">
-        <div class="container split-layout">
-          <div class="copy-block">
-            <p class="eyebrow">The Book</p>
-            <h2>A Story Worth Remembering.<br />A Freedom Worth Protecting.</h2>
-            <p>In <em>Escape from Communism: 1962</em>, Mily Soberon shares the story of growing up in Cuba amid political upheaval, family sacrifice, and a life shaped by resilience, faith, and hope.</p>
-            <p>This memoir reflects a powerful chapter in history while revealing the enduring strength of the human spirit and the transformative love of God.</p>
-            <div class="cta-row"><a class="button button-primary" href="https://www.amazon.com/s?k=Escape+from+Communism+1962+Mily+Soberon" target="_blank" rel="noopener noreferrer">Buy the Book</a></div>
-          </div>
-          <div class="visual-block"><img src="assets/book-feature.png" alt="Escape from Communism 1962 book feature artwork" loading="lazy" /></div>
-        </div>
-      </section>
-
-      <section id="about" class="content-section alt-section">
-        <div class="container split-layout">
-          <div class="visual-block"><img src="assets/back-cover.png" alt="Mily Soberon author artwork" loading="lazy" /></div>
-          <div class="copy-block">
-            <p class="eyebrow">About the Author</p>
-            <h2>Mily Soberon</h2>
-            <p>Mily Soberon is an American author whose writing is inspired by faith, family, and the freedom she and her loved ones fought to protect. Her story bridges personal memory and historical reflection with warmth, honesty, and spiritual depth.</p>
-            <p>Through her memoir, she invites others to reflect on courage, spiritual endurance, and the lasting importance of liberty.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="story" class="content-section">
-        <div class="container story-wrap">
-          <p class="eyebrow">Where My Story Began</p>
-          <h2>Varadero, Cuba</h2>
-          <div class="story-grid">
-            <img src="assets/varadero.png" alt="Varadero family memories" loading="lazy" />
-            <div class="story-copy">
-              <p>Mily was born and raised in Varadero, Cuba, where childhood memories, family traditions, and spiritual foundations shaped the woman she would become.</p>
-              <p>Her journey carries the weight of history, the tenderness of family, and the hope of a new beginning. It is a story of survival, gratitude, and the unwavering belief that God is faithful through every season.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="faith" class="content-section faith-section">
-        <div class="container narrow">
-          <p class="eyebrow">Faith</p>
-          <h2>The Holy Spirit</h2>
-          <blockquote>“The Holy Spirit placed this story upon my heart and guided the words as I wrote them.”</blockquote>
-          <p>Faith is the thread that runs through every chapter of this memoir. It is a testimony to God’s presence, guidance, and grace through seasons of fear, uncertainty, and renewal.</p>
-        </div>
-      </section>
-
-      <section id="contact" class="content-section contact-section">
-        <div class="container contact-box">
-          <p class="eyebrow">Contact</p>
-          <h2>Connect with Mily</h2>
-          <p>For reader messages, media inquiries, and author correspondence:</p>
-          <a class="button button-primary" href="mailto:milsobe2727@gmail.com">Email Mily</a>
-        </div>
-      </section>
+      <section class="hero" id="home"><div class="hero-shell"><h1 class="hero-title">Escape from<br />Communism 1962</h1><hr class="hero-line" /><span class="hero-subtitle">Looking at the Revolution through a Child’s Eyes</span><div class="hero-image-wrap"><img class="hero-image" src="assets/book-cover.png" alt="Escape from Communism 1962 book cover featuring Mily Soberon as a child with a cake" /></div><div class="hero-author-name">Mily Soberon</div></div></section>
+      <section class="highlights-section" aria-label="Memoir themes"><div class="container"><div class="section-head"><p class="eyebrow">A Life Remembered</p><h2>Stories shaped by faith, family, and freedom.</h2></div><div class="feature-grid"><article class="feature-card"><span class="feature-number">01</span><h3>Faith</h3><p>God’s presence sustained a family through uncertainty and transition.</p></article><article class="feature-card"><span class="feature-number">02</span><h3>Family</h3><p>Love, sacrifice, and memory carried a family through historic upheaval.</p></article><article class="feature-card"><span class="feature-number">03</span><h3>Freedom</h3><p>A personal testimony of resilience and the enduring value of liberty.</p></article><article class="feature-card"><span class="feature-number">04</span><h3>Resilience</h3><p>A child’s perspective on courage, renewal, and the strength to move forward.</p></article></div></div></section>
+      <section id="book" class="content-section book-section"><div class="container split-layout"><div class="copy-block"><p class="eyebrow">The Book</p><h2>A Story Worth Remembering.<br />A Freedom Worth Protecting.</h2><p>In <em>Escape from Communism: 1962</em>, Mily Soberon shares the story of growing up in Cuba amid political upheaval, family sacrifice, and a life shaped by resilience, faith, and hope.</p><p>This memoir reflects a powerful chapter in history while revealing the enduring strength of the human spirit and the transformative love of God.</p><div class="cta-row"><a class="button button-primary" href="https://www.amazon.com/s?k=Escape+from+Communism+1962+Mily+Soberon" target="_blank" rel="noopener noreferrer">Buy the Book</a></div></div><div class="visual-block"><img src="assets/book-feature.png" alt="Escape from Communism 1962 book feature artwork" loading="lazy" /></div></div></section>
+      <section id="about" class="content-section alt-section"><div class="container split-layout"><div class="visual-block"><img src="assets/back-cover.png" alt="Mily Soberon author artwork" loading="lazy" /></div><div class="copy-block"><p class="eyebrow">About the Author</p><h2>Mily Soberon</h2><p>Mily Soberon is an American author whose writing is inspired by faith, family, and the freedom she and her loved ones fought to protect. Her story bridges personal memory and historical reflection with warmth, honesty, and spiritual depth.</p><p>Through her memoir, she invites others to reflect on courage, spiritual endurance, and the lasting importance of liberty.</p></div></div></section>
+      <section id="story" class="content-section"><div class="container story-wrap"><p class="eyebrow">Where My Story Began</p><h2>Varadero, Cuba</h2><div class="story-grid"><img src="assets/varadero.png" alt="Varadero family memories" loading="lazy" /><div class="story-copy"><p>Mily was born and raised in Varadero, Cuba, where childhood memories, family traditions, and spiritual foundations shaped the woman she would become.</p><p>Her journey carries the weight of history, the tenderness of family, and the hope of a new beginning. It is a story of survival, gratitude, and the unwavering belief that God is faithful through every season.</p></div></div></div></section>
+      <section id="faith" class="content-section faith-section"><div class="container narrow"><p class="eyebrow">Faith</p><h2>The Holy Spirit</h2><blockquote>“The Holy Spirit placed this story upon my heart and guided the words as I wrote them.”</blockquote><p>Faith is the thread that runs through every chapter of this memoir. It is a testimony to God’s presence, guidance, and grace through seasons of fear, uncertainty, and renewal.</p></div></section>
+      <section id="contact" class="content-section contact-section"><div class="container contact-box"><p class="eyebrow">Contact</p><h2>Connect with Mily</h2><p>For reader messages, media inquiries, and author correspondence:</p><a class="button button-primary" href="mailto:milsobe2727@gmail.com">Email Mily</a></div></section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <strong>MILY SOBERON</strong>
-        <p>Faith · Family · Freedom · A Brighter Tomorrow</p>
-        <p>© 2026 Mily Soberon. All rights reserved.</p>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="container footer-wrap"><strong>MILY SOBERON</strong><p>Faith · Family · Freedom · A Brighter Tomorrow</p><p>© 2026 Mily Soberon. All rights reserved.</p></div></footer>
   </body>
 </html>
