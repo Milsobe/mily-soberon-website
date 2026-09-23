@@ -10,27 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* The original homepage uses one composite book spread, not three stacked cards. */
-      .hero-visual {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 0;
-      }
-      .hero-book-image {
-        display: block;
-        width: min(100%, 760px);
-        height: auto;
-        max-height: 680px;
-        object-fit: contain;
-        filter: drop-shadow(0 25px 35px rgba(0, 0, 0, .28));
-      }
-      @media (max-width: 900px) {
-        .hero-book-image {
-          width: min(100%, 620px);
-          max-height: 500px;
-        }
-      }
+      /* Keep the book and author portrait in separate, non-overlapping columns. */
+      .hero-visual { display:flex; align-items:center; justify-content:center; min-width:0; }
+      .hero-art { display:grid; grid-template-columns:minmax(0, 1fr) minmax(220px, 34%); align-items:center; gap:1.25rem; width:min(100%, 900px); }
+      .hero-book-image { display:block; width:100%; height:auto; max-height:680px; object-fit:contain; filter:drop-shadow(0 25px 35px rgba(0,0,0,.28)); }
+      .hero-author-card { overflow:hidden; border:1px solid rgba(212,174,94,.55); background:#0a2034; box-shadow:0 20px 45px rgba(0,0,0,.4); }
+      .hero-author-card img { display:block; width:100%; height:clamp(250px,27vw,360px); object-fit:cover; object-position:center top; }
+      .hero-author-meta { padding:1rem 1.15rem 1.2rem; color:#f8f2e8; }
+      .hero-author-meta .meta-label { display:block; margin-bottom:.45rem; color:#d4ae5e; font:700 .75rem/1.2 Inter,sans-serif; letter-spacing:.12em; text-transform:uppercase; }
+      .hero-author-meta h3 { margin:0; font:600 clamp(1.55rem,2.6vw,2.15rem)/1 Cormorant Garamond,serif; }
+      @media (max-width:900px) { .hero-art { grid-template-columns:minmax(0,1fr) minmax(180px,32%); gap:.75rem; } .hero-author-card img { height:245px; } }
+      @media (max-width:560px) { .hero-art { grid-template-columns:1fr; width:min(100%,420px); } .hero-book-image { max-height:430px; } .hero-author-card { width:55%; justify-self:end; } .hero-author-card img { height:190px; } .hero-author-meta { padding:.7rem; } }
     </style>
   </head>
   <body>
@@ -44,16 +34,8 @@
     <main id="main-content">
       <section class="hero" id="home">
         <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Faith, Family &amp; Freedom</p>
-            <h1><span>Escape from</span><span class="comm">Communism</span><span class="year">1962</span></h1>
-            <h2>Looking at the Revolution through a Child’s Eyes</h2>
-            <p class="lead">A deeply personal memoir preserving a family’s testimony of childhood, upheaval, exile, resilience, faith, and the blessing of freedom.</p>
-            <div class="cta-row"><a class="button button-primary" href="https://www.amazon.com/s?k=Escape+from+Communism+1962+Mily+Soberon" target="_blank" rel="noopener noreferrer">Buy on Amazon</a><a class="button button-secondary" href="#about">Meet the Author</a></div>
-          </div>
-          <div class="hero-visual" aria-label="Escape from Communism 1962 book cover and author artwork">
-            <img class="hero-book-image" src="assets/book-feature.png" alt="Open book spread for Escape from Communism 1962, including the front cover, back cover, and author photograph" />
-          </div>
+          <div class="hero-copy"><p class="eyebrow">Faith, Family &amp; Freedom</p><h1><span>Escape from</span><span class="comm">Communism</span><span class="year">1962</span></h1><h2>Looking at the Revolution through a Child’s Eyes</h2><p class="lead">A deeply personal memoir preserving a family’s testimony of childhood, upheaval, exile, resilience, faith, and the blessing of freedom.</p><div class="cta-row"><a class="button button-primary" href="https://www.amazon.com/s?k=Escape+from+Communism+1962+Mily+Soberon" target="_blank" rel="noopener noreferrer">Buy on Amazon</a><a class="button button-secondary" href="#about">Meet the Author</a></div></div>
+          <div class="hero-visual" aria-label="Book cover and author portrait"><div class="hero-art"><img class="hero-book-image" src="assets/book-feature.png" alt="Escape from Communism 1962 book cover and spread" /><div class="hero-author-card"><img src="assets/Authors Photo .jpeg" alt="Portrait of Mily Soberon" /><div class="hero-author-meta"><span class="meta-label">About the Author</span><h3>Mily Soberon</h3></div></div></div></div>
         </div>
       </section>
       <section class="highlights-section" aria-label="Memoir themes"><div class="container"><div class="section-head"><p class="eyebrow">A Life Remembered</p><h2>Stories shaped by faith, family, and freedom.</h2></div><div class="feature-grid"><article class="feature-card"><span class="feature-number">01</span><h3>Faith</h3><p>God’s presence sustained a family through uncertainty and transition.</p></article><article class="feature-card"><span class="feature-number">02</span><h3>Family</h3><p>Love, sacrifice, and memory carried a family through historic upheaval.</p></article><article class="feature-card"><span class="feature-number">03</span><h3>Freedom</h3><p>A personal testimony of resilience and the enduring value of liberty.</p></article><article class="feature-card"><span class="feature-number">04</span><h3>Resilience</h3><p>A child’s perspective on courage, renewal, and the strength to move forward.</p></article></div></div></section>
