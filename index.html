@@ -18,6 +18,91 @@
       .miracle-teaser-art span { color:#d7b267; font:600 clamp(2rem,4vw,4rem)/1 "Cormorant Garamond",serif; text-align:center; }
       .miracle-link { display:inline-block; margin-top:1rem; padding:.95rem 1.3rem; border:1px solid #d7b267; color:#f1d698; text-transform:uppercase; letter-spacing:.14em; font-size:.72rem; font-weight:700; }
       @media(max-width:760px){.miracle-teaser-inner{grid-template-columns:1fr}.miracle-teaser-art{min-height:210px}}
+
+      .faith-section {
+        background: #f8f2e8;
+        padding: clamp(3rem, 7vw, 6rem) 0;
+      }
+      .faith-plate {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        text-align: center;
+        color: #0f2440;
+      }
+      .faith-kicker {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.2rem, 4vw, 4rem);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin: 0 0 0.5rem;
+      }
+      .faith-title {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3.3rem, 8vw, 8rem);
+        line-height: 0.88;
+        letter-spacing: -0.04em;
+        color: #122b4c;
+        font-weight: 700;
+      }
+      .faith-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 1.5rem auto 1.75rem;
+        color: #c49c64;
+      }
+      .faith-divider::before,
+      .faith-divider::after {
+        content: "";
+        display: block;
+        width: min(180px, 24vw);
+        height: 1px;
+        background: rgba(196,156,100,0.8);
+      }
+      .faith-divider span {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+      .faith-quote {
+        margin: 0 auto;
+        max-width: 860px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 3vw, 3.2rem);
+        line-height: 1.2;
+        color: #122b4c;
+        font-style: italic;
+        font-weight: 500;
+      }
+      .faith-signoff {
+        margin-top: 2.25rem;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.3rem, 4vw, 4rem);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #122b4c;
+      }
+      .faith-rule-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 2rem auto 0;
+        color: #c49c64;
+      }
+      .faith-rule-bottom::before,
+      .faith-rule-bottom::after {
+        content: "";
+        display: block;
+        width: min(180px, 24vw);
+        height: 1px;
+        background: rgba(196,156,100,0.8);
+      }
+      .faith-rule-bottom span {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
     </style>
   </head>
   <body>
@@ -30,7 +115,16 @@
       <section id="book" class="content-section book-section"><div class="container split-layout"><div class="copy-block"><p class="eyebrow">The Book</p><h2>A Story Worth Remembering.<br />A Freedom Worth Protecting.</h2><p>In <em>Escape from Communism: 1962</em>, Mily Soberon shares the story of growing up in Cuba amid political upheaval, family sacrifice, and a life shaped by resilience, faith, and hope.</p><p>This memoir reflects a powerful chapter in history while revealing the enduring strength of the human spirit and the transformative love of God.</p><div class="cta-row"><a class="button button-primary" href="https://www.amazon.com/s?k=Escape+from+Communism+1962+Mily+Soberon" target="_blank" rel="noopener noreferrer">Buy the Book</a></div></div><div class="visual-block"><img src="assets/book-feature.png" alt="Escape from Communism 1962 book feature artwork" loading="lazy" /></div></div></section>
       <section id="about" class="content-section alt-section"><div class="container split-layout"><div class="visual-block"><img src="assets/back-cover.png" alt="Mily Soberon author artwork" loading="lazy" /></div><div class="copy-block"><p class="eyebrow">About the Author</p><h2>Mily Soberon</h2><p>Mily Soberon is an American author whose writing is inspired by faith, family, and the freedom she and her loved ones fought to protect. Her story bridges personal memory and historical reflection with warmth, honesty, and spiritual depth.</p><p>Through her memoir, she invites others to reflect on courage, spiritual endurance, and the lasting importance of liberty.</p></div></div></section>
       <section id="story" class="content-section"><div class="container story-wrap"><p class="eyebrow">Where My Story Began</p><h2>Varadero Beach, Cuba</h2><div class="story-grid"><img src="assets/Authors%20Photo%20.jpeg" alt="Mily Soberon portrait in Varadero Beach, Cuba" loading="lazy" /><div class="story-copy"><p>Mily was born and raised in Varadero Beach, Cuba, where childhood memories, family traditions, and spiritual foundations shaped the woman she would become.</p><p>Her journey carries the weight of history, the tenderness of family, and the hope of a new beginning. It is a story of survival, gratitude, and the unwavering belief that God is faithful through every season.</p></div></div></div></section>
-      <section id="faith" class="content-section faith-section"><div class="container narrow"><p class="eyebrow">Faith</p><h2>The Holy Spirit</h2><blockquote>“The Holy Spirit placed this story upon my heart and guided the words as I wrote them.”</blockquote><p>Faith is the thread that runs through every chapter of this memoir. It is a testimony to God’s presence, guidance, and grace through seasons of fear, uncertainty, and renewal.</p></div></section>
+      <section id="faith" class="content-section faith-section">
+        <div class="faith-plate">
+          <p class="faith-kicker">The</p>
+          <h2 class="faith-title">Holy Spirit</h2>
+          <div class="faith-divider"><span>✦</span></div>
+          <p class="faith-quote">“The Holy Spirit placed this story upon my heart and guided the words as I wrote them.”</p>
+          <div class="faith-rule-bottom"><span>✦</span></div>
+          <div class="faith-signoff">Mily Soberon</div>
+        </div>
+      </section>
       <section id="contact" class="content-section contact-section"><div class="container contact-box"><p class="eyebrow">Contact</p><h2>Connect with Mily</h2><p>For reader messages, media inquiries, and author correspondence:</p><a class="button button-primary" href="mailto:milsobe2727@gmail.com">Email Mily</a></div></section>
     </main>
     <footer class="site-footer"><div class="container footer-wrap"><strong>MILY SOBERON</strong><p>Faith · Family · Freedom · A Brighter Tomorrow</p><p>© 2026 Mily Soberon. All rights reserved.</p></div></footer>
