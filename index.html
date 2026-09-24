@@ -10,6 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <style>
+      .brand { display:flex; flex-direction:column; line-height:1.1; }
+      .brand-name {
+        color:#d7b267;
+        font-family:"Cormorant Garamond",serif;
+        font-size:clamp(2rem,3vw,2.8rem);
+        font-weight:700;
+        letter-spacing:.04em;
+        text-transform:uppercase;
+        text-shadow:0 1px 0 rgba(0,0,0,.18);
+      }
+      .brand-role {
+        color:#d7b267;
+        font-family:"Cormorant Garamond",serif;
+        font-size:1rem;
+        font-weight:600;
+        letter-spacing:.18em;
+        text-transform:uppercase;
+        margin-top:.2rem;
+      }
       .hero-title { color:#d7b267; font-family:"Cormorant Garamond",serif; font-weight:600; letter-spacing:.015em; text-shadow:0 3px 18px rgba(0,0,0,.3); }
       .miracle-teaser { background: linear-gradient(135deg,#0b1f32,#123957); border-top:1px solid rgba(215,178,103,.45); border-bottom:1px solid rgba(215,178,103,.45); padding:clamp(4rem,8vw,7rem) 0; }
       .miracle-teaser-inner { display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:clamp(2rem,7vw,7rem); }
@@ -33,7 +52,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header"><div class="container nav-wrap"><a class="brand" href="#home" aria-label="Mily Soberon home"><span class="brand-name">Mily Soberon</span><span class="brand-role">Author · Memoirist</span></a><nav aria-label="Primary navigation"><a href="#home">Home</a><a href="#book">The Book</a><a href="#about">About</a><a href="#story">My Story</a><a href="#faith">Faith</a><a href="#contact">Contact</a></nav></div></header>
+    <header class="site-header"><div class="container nav-wrap"><a class="brand" href="#home" aria-label="Mily Soberon home"><span class="brand-name">Mily Soberon</span><span class="brand-role">AUTHOR MEMOIRIST</span></a><nav aria-label="Primary navigation"><a href="#home">Home</a><a href="#book">The Book</a><a href="#about">About</a><a href="#story">My Story</a><a href="#faith">Faith</a><a href="#contact">Contact</a></nav></div></header>
     <main id="main-content">
       <section class="hero" id="home"><div class="hero-shell"><h1 class="hero-title">Escape from<br />Communism 1962</h1><hr class="hero-line" /><span class="hero-subtitle">Looking at the Revolution through a Child’s Eyes</span><div class="hero-image-wrap"><img class="hero-image" src="assets/book-cover.png" alt="Escape from Communism 1962 book cover featuring Mily Soberon as a child with a cake" /></div><div class="hero-author-name">Mily Soberon</div></div></section>
       <section class="miracle-teaser" aria-labelledby="miracle-title"><div class="container miracle-teaser-inner"><div><p class="eyebrow">Coming Soon · The Next Chapter</p><h2 id="miracle-title">A Miracle Life</h2><p>A continuation of Mily Soberon’s story—from childhood in Miami to marriage and a new chapter of life in California.</p><a class="miracle-link" href="miracle-life.html">Explore A Miracle Life</a></div><div class="miracle-teaser-art" aria-hidden="true"><span>The story<br />continues…</span></div></div></section>
