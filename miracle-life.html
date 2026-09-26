@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --navy-950:#061522;--navy-900:#0a2034;--navy-800:#102d49;--navy-700:#174568;--gold:#d4ae5e;--gold-light:#f4d995;--ivory:#f8f2e8;--ink:#172b42;--muted:#526274;--shadow:0 25px 70px rgba(3,18,32,.38);
+        --navy-950:#061522;--navy-900:#0a2034;--navy-800:#102d49;--navy-700:#174568;--gold:#d4ae5e;--gold-light:#f4d995;--ivory:#f8f2e8;--ink:#172b42;--muted:#526274;--shadow:0 25px 70px rgba(3,18,36,.15);
       }
-      *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,#091d2d 0%,#102d49 16%,#f6efe7 16%,#f6efe7 100%);color:var(--ink);font-family:Inter,sans-serif}
+      *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,#091d2d 0%,#102d49 16%,#f6efe7 16%,#f6efe7 100%);color:var(--ink);font-family:Inter,sans-serif;line-height:1.6}
       a{text-decoration:none} img{max-width:100%;display:block}
       .site-header{position:sticky;top:0;z-index:10;background:rgba(6,21,34,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,174,94,.3)}
       .container{width:min(1120px,calc(100% - 40px));margin:0 auto}
@@ -32,7 +32,7 @@
       .meta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
       .meta-row span{padding:.6rem .9rem;border:1px solid rgba(212,174,94,.4);background:rgba(6,21,34,.28);color:var(--gold-light);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
       .button-row{display:flex;flex-wrap:wrap;gap:1rem}
-      .button{display:inline-flex;align-items:center;justify-content:center;padding:.95rem 1.35rem;border:1px solid var(--gold);font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;font-weight:700;transition:all .2s ease}
+      .button{display:inline-flex;align-items:center;justify-content:center;padding:.95rem 1.35rem;border:1px solid var(--gold);font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;font-weight:700;color:var(--ivory);transition:all .2s ease}
       .button.primary{background:var(--gold);color:#091d2d}
       .button.secondary{background:transparent;color:var(--ivory)}
       .button:hover,.button:focus-visible{transform:translateY(-1px)}
@@ -42,10 +42,9 @@
       .section-head{margin-bottom:1.5rem}
       .section-head h2{margin:0;color:#102d49;font-family:"Cormorant Garamond",serif;font-size:clamp(2.3rem,5vw,4rem);line-height:1}
       .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
-      .photo-card{background:#fff;border:1px solid rgba(19,57,87,.12);min-height:260px;padding:1rem;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;box-shadow:0 12px 28px rgba(15,30,45,.06)}
-      .photo-card.placeholder{background:linear-gradient(135deg,#ecf1f5,#d8e3eb);border:1px dashed rgba(16,45,73,.32)}
-      .photo-label{display:inline-block;padding:.35rem .7rem;background:rgba(8,29,49,.85);color:var(--ivory);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:auto}
-      .photo-card p{margin:0;color:var(--ink);font-size:1rem;line-height:1.5;padding-top:1rem}
+      .photo-card{background:#fff;border:1px solid rgba(19,57,87,.12);min-height:300px;padding:1.2rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.08)}
+      .photo-card img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+      .photo-label{display:block;padding:.35rem .7rem;background:rgba(8,29,49,.85);color:var(--ivory);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;align-self:flex-start;border-radius:1px}
       .timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
       .story-card{background:#fff;border:1px solid rgba(19,57,87,.12);padding:1.2rem 1.15rem}
       .story-card .year{color:var(--navy-700);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:.6rem}
@@ -59,7 +58,7 @@
       .footer-wrap strong{font-size:1rem;letter-spacing:.14em;text-transform:uppercase}
       .footer-wrap p{margin:0}
       @media (max-width: 760px){
-        .site-header nav{gap:.6rem .9rem;padding:.5rem 0 1rem} .nav-wrap{flex-direction:column;justify-content:center;align-items:flex-start;padding:.8rem 0} .gallery-grid,.timeline{grid-template-columns:1fr}
+        .site-header nav{gap:.6rem .9rem;padding:.5rem 0 1rem} .nav-wrap{flex-direction:column;justify-content:center;align-items:flex-start;padding:.8rem 0} .gallery-grid,.timeline{grid-template-columns:1fr} .photo-card{min-height:220px}
       }
     </style>
   </head>
@@ -106,29 +105,29 @@
         </div>
 
         <div class="gallery-grid">
-          <article class="photo-card placeholder">
+          <article class="photo-card">
             <span class="photo-label">Photo 01</span>
-            <p>Upload your first image here to begin building the story.</p>
+            <img src="assets/miracle-life/photo-01.jpg" alt="Childhood memory from A Miracle Life" loading="lazy" />
           </article>
-          <article class="photo-card placeholder">
+          <article class="photo-card">
             <span class="photo-label">Photo 02</span>
-            <p>Add a childhood memory, a family moment, or an arrival photo.</p>
+            <img src="assets/miracle-life/photo-02.jpg" alt="Family moment from the 1960s" loading="lazy" />
           </article>
-          <article class="photo-card placeholder">
+          <article class="photo-card">
             <span class="photo-label">Photo 03</span>
-            <p>Use this space for the next chapter in the life story.</p>
+            <img src="assets/miracle-life/photo-03.jpg" alt="The arrival story in photographs" loading="lazy" />
           </article>
-          <article class="photo-card placeholder">
+          <article class="photo-card">
             <span class="photo-label">Photo 04</span>
-            <p>Place a meaningful image that reflects courage, faith, or family.</p>
+            <img src="assets/miracle-life/photo-04.jpg" alt="Courage and faith reflected in imagery" loading="lazy" />
           </article>
-          <article class="photo-card placeholder">
+          <article class="photo-card">
             <span class="photo-label">Photo 05</span>
-            <p>Build the visual timeline as your materials continue to grow.</p>
+            <img src="assets/miracle-life/photo-05.jpg" alt="Family heritage and remembrance" loading="lazy" />
           </article>
-          <article class="photo-card placeholder">
+          <article class="photo-card">
             <span class="photo-label">Photo 06</span>
-            <p>Future additions can be expanded here as the book develops.</p>
+            <img src="assets/miracle-life/photo-06.jpg" alt="The unfolding journey continues" loading="lazy" />
           </article>
         </div>
       </section>
